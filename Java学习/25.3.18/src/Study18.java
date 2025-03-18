@@ -93,7 +93,7 @@ class Study1803{
         System.out.println(d == c);//返回false
         char c1 = '9';
         System.out.println((int)c1);//返回57
-        System.out.println(c1 == 9);//返回false 应为c1的值为57，不相等
+        System.out.println(c1 == 9);//返回false 因为c1的值为57，不相等
         /*
         显示用例，使用Boolean返回值确定小明是否达到投票的年龄
         小明年龄为25，投票年龄限制为18
@@ -174,7 +174,85 @@ class Study1807{
         //variable = (condition) ? expressionTrue : expressionFalse
         int time = 22;
         //三元表达式
-        String  greetings = (time <18) ? "下午好" : "晚上好";
+        String  greetings = (time < 18) ? "下午好" : "晚上好";
         System.out.println(greetings);
+    }
+}
+class Study1808{
+    public static void main(String[] args) {
+        //switch语句的基本用法
+        //switch语句可以根据不同条件选择执行多个代码块中的一个
+        //switch语句可以视代码更简洁易读，特别是处理多个互斥条件时
+        //但是switch语句只能用于匹配特定类型的数据：整数、字符、枚举等，范围和更复杂的语句仍需if else
+        int day = 3;
+        switch (day){
+            case 1:System.out.println("星期一");
+            break;
+            case 2:System.out.println("星期二");
+            break;
+            case 3:System.out.println("星期三");
+            break;
+            //可以创建更多case来匹配数据
+            //break用于结束当前case语句并跳出switch循环
+            //如果忽略break会执行case穿透
+            //case穿透 当变量匹配某个case值后会从该case开始执行直到遇到break或switch结束
+            //但是当多条语句共享一条代码块时可主动忽略break
+            //Java12支持箭头语法（->）更简洁而且可以忽略break
+            //case 3 -> System.out.println()
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+                System.out.println("4，5，6，7共享一条代码块，忽略break");
+            break;
+            //default当所有case语句都未执行时执行default语句
+            default:
+                System.out.println("default一般放最后");
+        }
+    }
+}
+class Study1809{
+    public static void main(String[] args) {
+        //java while循环
+        //while循环会在指定条件为真的情况下，反复执行一段代码块
+
+        /*
+        while (条件) {
+                      循环体（在条件为真时重复执行）
+                                              }
+         */
+
+        //执行流程
+        //先检查条件，若条件为 true，则执行循环体。
+        //执行完循环体后，再次检查条件，重复此过程。
+        //若条件一开始就为 false，循环体一次都不执行。
+
+        //在下面的代码中，只要变量 i 的值小于5就会反复执行代码块
+        int i = 1;
+        while (i < 5){
+            System.out.println("i的值小于5");
+            i++;
+        //一共执行了四次"i的值小于5"
+
+        //（do/while）循环是while循环的一种变体
+        //这种循环会在检查条件是否为真之前先执行一次代码块，然后只要条件为真，它就会重复执行循环
+        //下面这个代码使用了do/while循环，即使条件为假也会先执行一次循环，应为代码块在条件检测前执行
+            int a = 0;
+            do{
+                System.out.println(a);
+                a++;
+            }while(a < 5);//每执行一次i循环就执行5次a循环 输出的值为 "i的值小于5" "0" "1" "2" "3" "4"
+            //（do/while）循环嵌套在while循环体内，所以执行一次i循环后会执行5次do/while循环
+
+            /*
+            do {
+                 循环体（至少执行一次）
+            } while (条件);          // 注意分号！
+             */
+
+        //先执行一次循环体，然后检查条件
+        //若条件为 true，重复执行循环体
+        //即使条件一开始就为 false，循环体至少执行一次
+        }
     }
 }
