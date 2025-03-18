@@ -5,9 +5,11 @@ public class Study18 {
         //String.length()
         System.out.println("字符串长度：" + txt.length());
         //结果为24
+
         //将字符串全部进行大小写toUpperCase() toLowerCase()
         System.out.println(txt.toUpperCase());//输出结果全部大写
         System.out.println(txt.toLowerCase());//输出结果全部小写
+
         //indexOf()字符串中指定文本的第一次出现位置 包括空格
         //Java时从0开始计算位置的
         System.out.println("字符串中'h'的第一次出现位置:" + txt.indexOf('f'));
@@ -23,12 +25,14 @@ class Study1801{
         //中间使用 空格 " " 隔开
         System.out.println(firstName + " " + lastName);
         // 输出 Jone Boy
+
         // + 加号运算符也可用于数字变量和数字变量相加，数字变量和字符串相加，字符串和字符串相加
         int num01 = 99, num02 = 88;
         String num03 = "33", num04 = "88";
         System.out.println(num01 + num02);//数字 + 数字 = 数字
         System.out.println(num03 + num04);//字符串 + 字符串 = 字符串
         System.out.println(num01 + num03);//数字 + 字符串 = 字符串
+
         /*
         要在字符串内表示一段引号需要用到反斜杠表示 \" \"
         类似的有  \"  \'  \\
@@ -42,10 +46,12 @@ class Study1801{
 class Study1802{
     public static void main(String[] args) {
         //Math类有很多方法，可以将数字进行数学运算
+
         //Math.max(x，y）方法可以用来找到x和y的最大值
         System.out.println(Math.max(9,10));//输出结果为10
         //Math.min(x,y)方法用来找到x，y中的最小值
         System.out.println(Math.min(9,10));//输出结果为9
+
         /*
         Math.sqrt(x) 方法返回 x 的平方根：
         如果 x 是一个负值，Math.sqrt(x) 会返回 NaN（非数字）not a number
@@ -57,8 +63,10 @@ class Study1802{
         System.out.println(Math.sqrt(0));//输出结果 0.0
         System.out.println(Math.sqrt(9));//输出结果 3.0
         System.out.println(Math.sqrt(2.0e54));//输出结果 1.414213562373095E27
+
         //Math.abs(x）返回x的绝对值 常被用来做精度计算
         System.out.println(Math.abs(-9));//输出结果为9
+
         /*
         Math.random() 方法返回一个介于 0.0（包括）和 1.0（不包括）之间的随机数
         换句话说，这个方法生成的随机数大于或等于 0.0，但小于 1.0
@@ -78,6 +86,7 @@ class Study1803{
     public static void main(String[] args) {
         //boolean 储存 true 和 false的值
         //boolean 使用boolean关键字声明，只能取 true 和 false两个值
+
         /*
         布尔表达式
         布尔表达式返回一个布尔值：真或假。这对于构建逻辑和查找答案非常有用
@@ -94,8 +103,9 @@ class Study1803{
         char c1 = '9';
         System.out.println((int)c1);//返回57
         System.out.println(c1 == 9);//返回false 因为c1的值为57，不相等
+
         /*
-        显示用例，使用Boolean返回值确定小明是否达到投票的年龄
+        现实用例，使用Boolean返回值确定小明是否达到投票的年龄
         小明年龄为25，投票年龄限制为18
          */
         int xiaoMin = 25;
@@ -141,7 +151,7 @@ class Study1805{
 }
 class Study1806{
     public static void main(String[] args) {
-        //使用else if 语句当第一条件为假时执行的新条件
+        //else if 语句在if条件为假时执行的新条件
         /*
         if(condition1){
         条件1为真时执行的代码块
@@ -150,6 +160,7 @@ class Study1806{
         }else{
         条件1为假且条件2为假时执行的代码块
         }
+
          */
         //运用else if 语句，定义一个时间变量time
         //如果time等于18就去吃饭，小于等于20就去学习否则就去睡觉
